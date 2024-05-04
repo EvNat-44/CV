@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+}
+
+.loader-wrapper{
+    position: relative;
+}
+
+.content,
+.name,
+#enterBtn {
+    text-align: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+.loading-bar {
+    background-color:black;
+    height: 4px;
+    width: 0%;
+    margin-top: 10px;
+    position: relative; /* Ensure the position context */
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-25%); opacity: 0.5; }
+    100% { transform: translateY(-50%); opacity: 1; }
+}
+
+.name {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 2px solid #3498db; /* Border color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+    animation: floatUp 4s; /* Animation for name */
+}
+
+.hidden {
+    display: none;
+}
+
+.name h1 {
+    margin-bottom: 20px; /* Adjust spacing between name and buttons */
+}
+
+.name button {
+    display: block;
+    margin-top: 10px; /* Adjust spacing between buttons */
+    padding: 10px 20px;
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Initially hide buttons */
+    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+    animation: floatUp 4s; /* Animation for buttons */
+}
+
+.name button:not(.hidden) {
+    opacity: 1; /* Fade-in effect when not hidden */
+}
+
+.name button:hover {
+    background-color: #2980b9; /* Button background color on hover */
+}
