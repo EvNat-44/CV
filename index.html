@@ -19,10 +19,55 @@
     <p>Loading...</p>
     </div>
     <div class="name hidden">
-    <h1>Nathan Evans</h1>
-        <button id="aboutBtn">More About Me</button>
-        <button id="cvBtn">Download my CV here</button>
-        <button id="contactBtn">My Contact Details</button>
+    <h1>Nathan Evans CV Website</h1>
+        <button id="aboutBtn" onclick="toggleAboutContent()">More About Me</button>
+        <div id="aboutContent" class="content hidden">
+            <!-- Content area for "More About Me" -->
+            <h2>Who I Am…</h2>
+            <p>
+                Leader. Motivator. Innovator. Perfectionist. Down-To-Earth. I feel that these phrases describe me best as a person. It is my passion to strive to more, to be better and to be the best version of myself. I am not self-centred, contrastingly I strive to be the person that other people can rely on, a helping hand, to be a person that people can follow in times of crisis. I want to prove that hard, persistent work can set you apart from the majority. 
+                <br>
+                You may have noticed that I mentioned a lot of “I’s” above, but that will just about be the most you hear me talk about myself. I am extremely humble in my craft, and I am always open to new methods and perspectives that may broaden my way of thinking. 
+                One day, when I leave this Earth, I hope to be remembered, I would like to continue being a living memory in the minds of dreamers.  
+            </p>
+        </div>
+        <button id="skillsBtn" onclick="toggleSkillsContent()">My Skill Set</button>
+        <div id="skillsContent" class="content hidden">
+            <!-- Content area for "Skills" -->
+            <h2 align="left">A list of my Technical Skills:</h2>
+            <ol align="left">
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>C# - Microsoft Visual Studio</li>
+                <li>JavaScript – Microsoft Visual Studio Code</li>
+                <li>SQL – SQL Server Management Studio</li>
+                <li>Computer Literate: Microsoft Word, Excell, Access, PowerPoint</li>
+            </ol>
+            <h2 align="left">A few of my Soft Skills:</h2>
+            <ol align="left">
+                <li>Leadership</li>
+                <li>Communication</li>
+                <li>Problem-Solving</li>
+                <li>Teamwork</li>
+                <li>Creativity</li>
+                <li>Adaptability</li>
+            </ol>
+        </div>
+        <button id="cvBtn">View my CV here</button>
+        <div id="cvImage" class="hidden">
+            <p>Click on the Image below</p>
+            <a href="https://drive.google.com/file/d/1X73KLsfXSFza_ZVOtXWO-XHL9YZN6q-u/view?usp=sharing" alt="Google Drive - Nathan Evans CV" target="blank"><img src="Logo.png" alt="Logo" /></a>
+        </div>
+        <button onclick="openWebsiteInNewTab()">Click to view my Full Academic Record</button>
+        
+        <button id="contactBtn" onclick="toggleContactDetails()">My Contact Details</button>
+        <div id="contactDetails" class="hidden">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:jnaevans3@gmail.com"></a>jnaevans3@gmail.com</p>
+            <p>Phone: +27 82 406 4847</p>
+            <p>Address: 1 Carney Street, Minnebron, Johannesburg, South Africa</p>
+        </div>
+        
     </div>
     <!--<button id="enterBtn" class="hidden">Enter</button>-->
       

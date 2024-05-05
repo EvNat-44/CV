@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    
 }
 
 .loader-wrapper{
@@ -50,6 +51,7 @@ body {
 }
 
 .name {
+    max-height: 80%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -59,6 +61,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
     animation: floatUp 4s; /* Animation for name */
+    z-index: 999; /* Ensure buttons appear above content */
+    overflow-y: scroll; /* Enable vertical scroll */
 }
 
 .hidden {
@@ -79,8 +83,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     opacity: 0; /* Initially hide buttons */
-    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
-    animation: floatUp 4s; /* Animation for buttons */
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+    
 }
 
 .name button:not(.hidden) {
@@ -90,3 +94,34 @@ body {
 .name button:hover {
     background-color: #2980b9; /* Button background color on hover */
 }
+
+@keyframes flash {
+    0% {
+      background-color: #3498db;
+    }
+    50% {
+      background-color: #fff;
+    }
+    100% {
+      background-color: #3498db;
+    }
+}
+
+.name button:active {
+    animation: flash 1s linear;
+}
+
+.hidden {
+    display: none;
+}
+#cvImage img {
+    max-width: 100%; /* Ensure the image does not exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    width: 100px; /* Set the desired width */
+}
+
+
+
+
+
+
