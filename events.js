@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var name = document.querySelector(".name");
         if (name) {
           name.classList.remove("hidden");
+
+          //runTypewriterEffect();
+
+
           setTimeout(function() {
               var buttons = document.querySelectorAll(".name button");
               buttons.forEach(function(button) {
@@ -69,13 +73,23 @@ if (projectsContent.classList.contains('hidden')) {
 }
 
 function openWebsiteInNewTab() {
-  var url = 'https://drive.google.com/file/d/1TUiFCzgixwJ5Nc-M8H2wf429iih0h-m2/view?usp=sharing'; 
+var url = 'https://drive.google.com/file/d/18sqQtv04DcyymbsO_35mc4HWdMfVeGWx/view?usp=sharing'; 
 
-  // Create an anchor element
-  var anchor = document.createElement('a');
-  anchor.href = url; // Set the URL
-  anchor.target = '_blank'; // Open in a new tab
-  anchor.click(); // Simulate a click on the anchor to open the link
+// Create an anchor element
+var anchor = document.createElement('a');
+anchor.href = url; // Set the URL
+anchor.target = '_blank'; // Open in a new tab
+anchor.click(); // Simulate a click on the anchor to open the link
+}
+
+function openWebsiteInNewTab1() {
+var url = 'https://drive.google.com/drive/folders/1Y8zf4UtL45T886VhYBlNgLBeelHYnmo4?usp=sharing'; 
+
+// Create an anchor element
+var anchor = document.createElement('a');
+anchor.href = url; // Set the URL
+anchor.target = '_blank'; // Open in a new tab
+anchor.click(); // Simulate a click on the anchor to open the link
 }
 
 function toggleContactDetails() {
@@ -86,3 +100,36 @@ if (contactDetails.classList.contains('hidden')) {
     contactDetails.classList.add('hidden');
 }
 }
+
+/*function runTypewriterEffect() {
+const nameEl = document.querySelector(".name");
+const text   = nameEl?.textContent.trim() || "Welcome!";
+nameEl.textContent = "";           // clear existing text
+let i = 0;
+
+function type() {
+  if (i < text.length) {
+    nameEl.textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 10);        // typing speed (ms/char)
+  }
+}
+if (nameEl) type();
+}*/
+/*
+function runTypewriterEffect() {
+const nameEl = document.querySelector(".name");
+const text = nameEl?.textContent.trim() || "Welcome!";
+nameEl.textContent = "";
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        nameEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 100); // Speed of typing
+    }
+}
+
+if (nameEl) type();
+}*/

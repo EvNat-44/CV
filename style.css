@@ -119,6 +119,45 @@ body {
     height: auto; /* Maintain aspect ratio */
     width: 100px; /* Set the desired width */
 }
+/*
+.name::after {
+    content: '|';
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50%   { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}*/
+@keyframes bounceIn {
+    0%   { transform: scale(0.5); opacity: 0; }
+    60%  { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  .name button {
+    animation: bounceIn 0.4s ease forwards;
+}
+
+/*@keyframes floatUp {
+    0%   { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .name {
+    animation: floatUp 1s ease forwards;
+  }*/
+
+.name button {
+    transition: all 0.3s ease;
+}
+  
+.name button:hover {
+    background-color: #2980b9;
+    color: white;
+    box-shadow: 0 0 15px #2980b9;
+    transform: scale(1.05);
+}
 
 
 
